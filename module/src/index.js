@@ -101,13 +101,6 @@ const InlineHtml = Noodl.defineReactNode({
     },
 
     setup(context, graphModel) {
-        if (
-            !context.editorConnection ||
-            !context.editorConnection.isRunningLocally()
-        ) {
-            return
-        }
-
         function _managePortsForNode(node) {
             function _updatePorts() {
                 const ports = []
